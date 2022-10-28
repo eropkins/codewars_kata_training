@@ -1,0 +1,25 @@
+Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+It should remove all values from list a, which are present in list b keeping their order.
+
+Solution #1
+
+def array_diff(a, b):
+    return [x for x in a if x not in b]
+    
+Solution #2
+
+def array_diff(a, b):
+    #your code here
+    return filter(lambda i: i not in b, a)
+
+My Solution
+
+def array_diff(a, b):
+    if not b:
+        return a
+    else:
+        c = []
+        for i in a:
+            if i not in b:
+                c.append(i)
+        return c
